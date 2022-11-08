@@ -1,0 +1,18 @@
+brew "zsh"
+brew "git"
+brew "git-lfs"
+brew "tmux"
+brew "stow"
+brew "wget"
+brew "thefuck"
+brew "tree"
+brew "fd"
+brew "ripgrep"
+brew "openssl"
+brew "gnupg"
+
+cask "iterm2"
+cask "font-meslo-lg-nerd-font"   # required for Powerlevel10k
+brew "powerlevel10k"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
