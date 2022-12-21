@@ -3,7 +3,6 @@
     email = hello@sykez.com
 
 [core]
-    editor = nvim
     excludesfile = ~/.gitignore_global
 
 [init]
@@ -11,3 +10,5 @@
 
 [color]
     ui = auto
+[push]
+	autoSetupRemote = true
