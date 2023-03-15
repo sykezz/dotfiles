@@ -23,3 +23,5 @@ export KUBECONFIG="$HOME/oidc-kubeconfig.yaml"
 
 
 . "$HOME/.local/bin/env"
+
+eval $(thefuck --alias)

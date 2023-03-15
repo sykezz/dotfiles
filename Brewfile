@@ -16,3 +16,12 @@ cask "font-meslo-lg-nerd-font"   # required for Powerlevel10k
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+
+# Docker
+brew "docker"
+brew "colima"
+
+# k8s
+brew "kubectl"
+brew "k9s"
+brew "kubelogin"
