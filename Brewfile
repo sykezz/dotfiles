@@ -17,11 +17,12 @@ brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
-# Docker
+# Docker, k8s, tf
 brew "docker"
 brew "colima"
-
-# k8s
 brew "kubectl"
 brew "k9s"
 brew "kubelogin"
+brew "helm"
+tap "hashicorp/tap"
+brew "hashicorp/tap/terraform"

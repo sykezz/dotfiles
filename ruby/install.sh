@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/.dotfiles"
-MODULE_DIR="$HOME/.config/zsh"
-
 echo "💎 Installing rbenv + ruby-build..."
 brew install rbenv ruby-build
 
