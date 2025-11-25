@@ -17,4 +17,4 @@ rbenv rehash
 echo "🧩 Enabling Ruby module..."
 ln -nfs "$DOTFILES/ruby/module.zsh" "$MODULE_DIR/ruby.zsh"
 
-echo "✔ Ruby module installed!"
+echo "💎 Ruby module installed!"

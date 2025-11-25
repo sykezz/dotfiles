@@ -21,4 +21,4 @@ stow --target="$HOME" python
 echo "🧩 Enabling python module..."
 ln -nfs "$DOTFILES/python/module.zsh" "$MODULE_DIR/python.zsh"
 
-echo "✔ Python module installed successfully!"
+echo "🐍 Python module installed successfully!"
