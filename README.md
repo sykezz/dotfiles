@@ -10,11 +10,14 @@ Modular dotfiles setup for macOS using:
 - Python
 - Docker
 - Kubectl
+- Terraform
+- Bun
+- Java
 
 ## Setup
 
 ```sh
-git clone https://github.com/yourname/dotfiles ~/.dotfiles
+git clone https://github.com/sykezz/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./bootstrap
 ```

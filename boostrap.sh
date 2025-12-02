@@ -20,7 +20,7 @@ ln -nfs /opt/homebrew/opt/powerlevel10k "/$ZSH_CUSTOM/themes/powerlevel10k"
 
 echo "📦 Stowing packages..."
 cd "$DOTFILES"
-for pkg in zsh; do
+for pkg in zsh git; do
   stow --verbose --target="$HOME" "$pkg"
 done
 

@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/.dotfiles"
-MODULE_DIR="$HOME/.config/zsh"
-
 echo "☕ Installing Java (OpenJDK 17)..."
 brew install openjdk@17
 

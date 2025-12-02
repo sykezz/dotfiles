@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/.dotfiles"
-MODULE_DIR="$HOME/.config/zsh"
 VERSION="3.12"
 
 ### Install uv if not installed
