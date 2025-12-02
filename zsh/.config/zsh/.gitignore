@@ -1,0 +1,7 @@
+*
+!.gitignore
+!aliases.zsh
+!oh-my-zsh.zsh
+!path.zsh
+!docker.zsh
+!kube.zsh
