@@ -1,2 +1,19 @@
 [general]
 import = ["~/.config/alacritty/base.toml"]
+
+[keyboard]
+bindings = [
+  # Word navigation (Alt+Arrow)
+  { key = "Right", mods = "Alt", chars = "\u001BF" },  # Alt+Right: Forward word
+  { key = "Left", mods = "Alt", chars = "\u001BB" },   # Alt+Left: Backward word
+
+  # Line navigation (Cmd+Arrow)
+  { key = "Left", mods = "Command", chars = "\u001bOH" },   # Cmd+Left: Start of line
+  { key = "Right", mods = "Command", chars = "\u001bOF" },  # Cmd+Right: End of line
+
+  # Word deletion
+  { key = "Back", mods = "Alt", chars = "\u0017" },  # Alt+Backspace: Delete word backward
+
+  # Clear screen
+  { key = "K", mods = "Command", chars = "\u000C" },  # Cmd+K: Clear screen
+]
