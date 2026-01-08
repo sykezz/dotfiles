@@ -5,7 +5,7 @@ Modular dotfiles setup for macOS using:
 - GNU Stow
 - Per-module install scripts
 - Module loader via `zsh.d/*.zsh`
-- Oh-My-Zsh + Powerlevel10k
+- Alacritty + Zinit + Oh-My-Zsh + Starship
 - Ruby
 - Python
 - Docker

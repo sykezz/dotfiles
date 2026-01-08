@@ -1,0 +1,5 @@
+[general]
+import = ["~/.config/alacritty/base.toml"]
+
+[terminal.shell]
+program = "C:\\Program Files\\Git\\bin\\bash.exe"

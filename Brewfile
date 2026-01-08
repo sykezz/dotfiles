@@ -1,21 +1,22 @@
-brew "zsh"
 brew "git"
 brew "git-lfs"
 brew "tmux"
 brew "stow"
 brew "wget"
-brew "thefuck"
 brew "tree"
 brew "fd"
 brew "ripgrep"
 brew "openssl"
 brew "gnupg"
 
+# Terminal
+brew "zsh"
+brew "fzf" # For fzf-tab zsh plugin
+brew "thefuck"
 cask "iterm2"
-cask "font-meslo-lg-nerd-font"   # required for Powerlevel10k
-brew "powerlevel10k"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
+cask "alacritty"
+brew "starship"
+cask "font-fira-code-nerd-font"
 
 # Docker, k8s, tf
 brew "docker"
@@ -26,3 +27,6 @@ brew "kubelogin"
 brew "helm"
 tap "hashicorp/tap"
 brew "hashicorp/tap/terraform"
+
+cask "android-file-transfer"
+cask "onyx"

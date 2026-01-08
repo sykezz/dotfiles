@@ -3,6 +3,9 @@ set -e
 
 DOTFILES="$HOME/.dotfiles"
 
+echo "🖥 Applying macOS defaults..."
+bash "$DOTFILES/macos/defaults.sh"
+
 echo "🍺 Installing Homebrew..."
 if ! command -v brew >/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -11,12 +14,9 @@ fi
 echo "📦 Installing Brew packages..."
 brew bundle --file "$DOTFILES/Brewfile"
 
-# OMZ custom:
-mkdir -p "$ZSH_CUSTOM/plugins"
-mkdir -p "$ZSH_CUSTOM/themes"
-ln -nfs /opt/homebrew/share/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
-ln -nfs /opt/homebrew/share/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
-ln -nfs /opt/homebrew/opt/powerlevel10k "/$ZSH_CUSTOM/themes/powerlevel10k"
+echo "🎨 Installing iTerm2 Snazzy color scheme..."
+curl -fsSL https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors -o /tmp/Snazzy.itermcolors
+open /tmp/Snazzy.itermcolors
 
 echo "📦 Stowing packages..."
 cd "$DOTFILES"
@@ -24,7 +24,10 @@ for pkg in zsh git; do
   stow --verbose --target="$HOME" "$pkg"
 done
 
-echo "🖥 Applying macOS defaults..."
-bash "$DOTFILES/macos/defaults.sh"
+# Load and update Zinit
+zsh -c "source ~/.zshrc && zinit self-update"
+
+# Alacritty config for macOS
+ln -nfs "$DOTFILES/zsh/.config/alacritty/alacritty.macos.toml" "$DOTFILES/zsh/.config/alacritty/alacritty.toml"
 
 echo "✨ Bootstrap complete! Restart your terminal"
