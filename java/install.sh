@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/.dotfiles"
-MODULE_DIR="$HOME/.config/zsh"
+# https://github.com/sdkman/homebrew-tap
+brew tap sdkman/tap
+brew install sdkman-cli
 
-echo "☕ Installing Java (OpenJDK 17)..."
-brew install openjdk@17
-
-# Ensure macOS knows about this JDK (Homebrew caveats)
-sudo ln -sfn \
-  /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk \
-  /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+echo "🛠 Installing Java and Maven via SDKMAN..."
+sdk install java
+sdk install maven
 
 echo "🧩 Enabling Java module..."
 ln -nfs "$DOTFILES/java/module.zsh" "$MODULE_DIR/java.zsh"

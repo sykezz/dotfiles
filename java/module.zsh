@@ -1,5 +1,6 @@
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
-export PATH="$JAVA_HOME/bin:$PATH"
+# Java and Maven via sdkman
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
 # Useful aliases
 alias javav="java -version"
