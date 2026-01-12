@@ -1,19 +1,27 @@
 #!/usr/bin/env bash
 set -e
+VERSION="3.14"
 
-DOTFILES="$HOME/.dotfiles"
-MODULE_DIR="$HOME/.config/zsh"
+### Install uv if not installed
+if ! command -v uv >/dev/null 2>&1; then
+  curl -fsSL https://astral.sh/uv/install.sh | sh
+  source $HOME/.local/bin/env
+fi
 
-### Install Python
-echo "🐍 Installing Python 3.10..."
-brew install python@3.10
+### Install Python via uv
+echo "🐍 Installing Python via uv..."
+uv python install $VERSION
 
 ### Install direnv
 if ! command -v direnv >/dev/null 2>&1; then
   brew install direnv
 fi
 
-### Stow python config
+### Install ruff via uv tool
+echo "🧹 Installing Ruff (linter/formatter) via uv..."
+uv tool install ruff
+
+### Stow python config (python-version, ruff config, envrc)
 echo "🔗 Stowing Python files..."
 stow --target="$HOME" python
 
