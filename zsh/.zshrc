@@ -8,8 +8,8 @@ setopt hist_ignore_dups
 setopt hist_verify
 setopt hist_ignore_space
 
-DOTFILES="$HOME/.dotfiles"
-MODULE_DIR="$HOME/.config/zsh"
+export DOTFILES="$HOME/.dotfiles"
+export MODULE_DIR="$HOME/.config/zsh"
 for mod in "$MODULE_DIR"/*.zsh; do
   [[ -f "$mod" ]] && source "$mod"
 done
