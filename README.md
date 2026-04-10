@@ -24,6 +24,8 @@ cd ~/.dotfiles
 
 ### Install Module
 
+Modules like `python`, `ruby`, `java`, `node`, and others are opt-in and not run by `bootstrap.sh`. Install them individually as needed.
+
 Run the `install.sh` script from the module directory. Eg:
 ```
 ✗ python/install.sh

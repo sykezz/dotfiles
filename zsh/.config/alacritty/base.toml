@@ -19,3 +19,14 @@ size = 13
 
 [selection]
 save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+[mouse]
+bindings = [
+  { mouse = "Right", mods = "Control", action = "Paste" },
+
+  # Claude added this
+  { key = "Return", mods = "Shift", chars = "\u001b\r" }
+]

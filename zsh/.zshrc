@@ -1,5 +1,3 @@
-autoload -Uz compinit && compinit
-
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt share_history

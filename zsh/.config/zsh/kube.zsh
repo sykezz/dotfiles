@@ -1,10 +1,5 @@
 export KUBECONFIG="$HOME/.kube/config"
 
-# kubectl completions
-if command -v kubectl >/dev/null 2>&1; then
-  source <(kubectl completion zsh)
-fi
-
 alias k="kubectl"
 alias kctx="kubectl config use-context"
 
