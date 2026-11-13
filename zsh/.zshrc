@@ -14,3 +14,6 @@ done
 
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
+
+# Added by aisw
+eval "$(aisw shell-hook zsh)"

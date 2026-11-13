@@ -8,6 +8,8 @@ brew "fd"
 brew "ripgrep"
 brew "openssl"
 brew "gnupg"
+cask "font-noto-sans-thaana"
+cask "font-noto-color-emoji"
 
 # Terminal
 brew "zsh"
@@ -30,10 +32,17 @@ brew "kubelogin"
 brew "helm"
 tap "hashicorp/tap"
 brew "hashicorp/tap/terraform"
+brew "awscli"
 
 cask "tableplus"
 cask "android-file-transfer"
 cask "onyx"
+cask "notion"
+brew "gh" # Github CLI
+brew "tailscale"
+brew "sevenzip" # (7-zip). Exec: 7zz
+
+# AI
 cask "claude-code"
 cask "codex"
 brew "gemini-cli"

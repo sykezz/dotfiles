@@ -6,7 +6,9 @@ brew tap sdkman/tap
 brew install sdkman-cli
 
 echo "🛠 Installing Java and Maven via SDKMAN..."
-sdk install java
+# sdk install java 8.0.482-zulu
+sdk install java 17.0.20-tem
+sdk install java 21.0.11-tem
 sdk install maven
 
 echo "🧩 Enabling Java module..."
