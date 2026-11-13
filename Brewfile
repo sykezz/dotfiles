@@ -19,7 +19,7 @@ cask "iterm2"
 cask "alacritty"
 brew "starship"
 cask "font-fira-code-nerd-font"
-brew "Adembc/homebrew-tap/lazyssh"
+brew "Adembc/homebrew-tap/lazyssh", trusted: true
 brew "lazygit"
 
 # Docker, k8s, tf
@@ -27,16 +27,15 @@ brew "docker"
 brew "colima"
 brew "kubectl"
 brew "kustomize"
-brew "k9s"
+brew "derailed/k9s/k9s", trusted: true
 brew "kubelogin"
 brew "helm"
-tap "hashicorp/tap"
-brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/terraform", trusted: true
 brew "awscli"
 
 cask "tableplus"
 cask "android-file-transfer"
-cask "onyx"
+# cask "onyx"
 cask "notion"
 brew "gh" # Github CLI
 brew "tailscale"
@@ -45,4 +44,5 @@ brew "sevenzip" # (7-zip). Exec: 7zz
 # AI
 cask "claude-code"
 cask "codex"
-brew "gemini-cli"
+cask "antigravity-cli"
+brew "burakdede/tap/aisw", trusted: true
